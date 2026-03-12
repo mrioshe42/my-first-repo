@@ -1,2 +1,2 @@
 #!/bin/bash
-tr -d '\r' | xargs -n1 | tr '[:upper:]' '[:lower:]' | sort | uniq -u
+xargs -n1 | sort | uniq -u
