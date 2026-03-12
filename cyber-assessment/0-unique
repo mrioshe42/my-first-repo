@@ -1,2 +1,2 @@
 #!/bin/bash
-xargs -n1 | sort | uniq -u
+sort | uniq -c | while read count word; do [ "$count" -eq 1 ] && echo "$word"; done
