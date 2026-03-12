@@ -1,2 +1,2 @@
 #!/bin/bash
-sort | uniq -c | while read count word; do [ "$count" -eq 1 ] && echo "$word"; done
+sort | uniq -c | grep '^ *1 ' | grep -o '[^ ]*$'
