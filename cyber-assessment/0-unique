@@ -1,2 +1,2 @@
 #!/bin/bash
-xargs -I{} printf '%s\n' '{}' | grep -v '^[[:space:]]*$' | tr -d '\r' | LC_ALL=en_US.UTF-8 sort | uniq -u
+grep -v '^[[:space:]]*$' | tr -d '\r' | grep -oP '\S.*\S|\S' | LC_ALL=en_US.UTF-8 sort | uniq -u
