@@ -1,2 +1,2 @@
 #!/bin/bash
-sort | uniq -c | grep '^ *1 ' | grep -o '[^ ]*$'
+grep -v '^[[:space:]]*$' | tr -s '[:blank:]' '\n' | tr -d '\r' | LC_ALL=C.UTF-8 sort | uniq -u
