@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -v '^[[:space:]]*$' | tr -d '\r' | grep -oP '\S.*\S|\S' | LC_ALL=en_US.UTF-8 sort | uniq -u
+grep -v '^[[:space:]]*$' | tr -d '\r' | grep -oP '\S.*\S|\S' | sort | uniq -u
