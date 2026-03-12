@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -v '^$' | xargs -n1 | sort | uniq -u
+tr -d '\r' | xargs -n1 | tr '[:upper:]' '[:lower:]' | sort | uniq -u
